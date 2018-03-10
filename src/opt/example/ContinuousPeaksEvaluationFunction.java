@@ -36,26 +36,32 @@ public class ContinuousPeaksEvaluationFunction implements EvaluationFunction {
             } else {
                 if (count > max0) {
                     max0 = count;
-                    count = 0;
                 }
+                count = 0;
             }
         }
+        if (count > max0) {
+            max0 = count;
+        }
         int max1 = 0;
-       count = 0;
+        count = 0;
         for (int i = 0; i < data.size(); i++) {
             if (data.get(i) == 1) {
                 count++;
             } else {
                 if (count > max1) {
                     max1 = count;
-                    count = 0;
                 }
+                count = 0;
             }
+        }
+        if (count > max1) {
+            max1 = count;
         }
         int r = 0;
         if (max1 > t && max0 > t) {
             r = data.size();
         }
         return Math.max(max1, max0) + r;
-    }
+    }     
 }

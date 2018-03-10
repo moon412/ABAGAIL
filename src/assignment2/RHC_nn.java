@@ -24,7 +24,7 @@ public class RHC_nn {
     private static Instance[] training = initializeTrain();
     private static Instance[] test = initializeTest();
 
-    private static int inputLayer = 16, hiddenLayer = 8, outputLayer = 26;
+    private static int inputLayer = 16, hiddenLayer = 32, outputLayer = 26;
     // {10, 100, 1000, 3000, 5000, 7000, 10000, 12000, 14000, 16000, 18000 20000}
     private static int[] trainingIterations = {10, 90, 900, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000};
     
